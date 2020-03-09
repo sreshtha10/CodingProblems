@@ -183,10 +183,42 @@ int main()
         }
         printf("\n");
     }
+    printf("\n");
+    /* 16 */
+    for (int i = 5; i >= 1; i--)
+    {
+      for (int j = i; j <= 2*(i)-1; j++)
+        {
+            printf("%d",j);
+        }
+        printf("\n");
+    }
+    
+    printf("\n");
 
+    /* 17 */
+    for (int i = 1; i <= 5; i++)
+    {
+        for (int j = 5; j>= i; j--)
+        {
+            printf("%d",j);
+        }
+        printf("\n");
+    }
     
+    printf("\n");
+
+    /* 18 */
+    for (int i = 1; i <= 5; i++)
+    {
+        for (int j = i; j<= 5; j++)
+        {
+            printf("%d",j);
+        }
+        printf("\n");
+    }
     
-    
+
     
 
 }

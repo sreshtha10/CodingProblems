@@ -114,7 +114,7 @@ int main()
 
     printf("\n");
 
-    /* 10 */
+    /* 11 */
     for (int i = 5; i >= 1; i--)
     {
         for (int j = i; j <= 5; j++)
@@ -124,7 +124,69 @@ int main()
         printf("\n");
     }
     
+    printf("\n");
+    /* 10 */
+    for ( int i = 5; i >= 1; i--)
+    {
+        for (int j = 5; j>= i; j--)
+        {
+            printf("%d",j);
+        }
+        printf("\n");
+    }
 
+    printf("\n");
+
+    /* 12 */
+    for (int i = 1; i <= 5; i++)
+    {
+        for (int j = 5; j >= i; j--)
+        {
+            printf("%d",i);
+        }
+        printf("\n");
+    }
+    printf("\n");
+    /* 13 */
+
+    for (int i = 5; i >= 1; i--)
+    {
+        for (int j = 1; j <= 6-i; j++)
+        {
+            printf("%d",i);
+        }
+        printf("\n");
+    }
+    
+    printf("\n");
+
+    /* 14 */
+    for (int i = 1; i <= 5; i++)
+    {
+        int k = i;
+        for (int j = 1 ; j <= i; j++,k++)
+        {
+            printf("%d",k);
+        }
+        printf("\n");
+    }
+    
+    printf("\n");
+
+    /* 15 */
+    char a = 'A';
+    for (int i = 1; i <= 5; i++)
+    {
+        for (int j= 1; j <= i; j++,a++)
+        {
+            printf("%c",a);
+        }
+        printf("\n");
+    }
+
+    
+    
+    
     
 
 }

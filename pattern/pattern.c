@@ -218,7 +218,196 @@ int main()
         printf("\n");
     }
     
+    printf("\n");
 
+    /* 19 */
+    for (int i = 1; i <= 5; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            if (j %2 == 0)
+            {
+                printf("0");
+            }
+            else
+            {
+                printf("1");
+            }
+            
+        }
+        printf("\n");
+    }
+    
+    printf("\n");
+
+    /* 20 */
+    for (int i = 1; i <=5 ; i++)
+    {
+        for (int j = 1; j <= i ; j++)
+        {
+            if ( i % 2 == 0)
+            {
+                printf("0");
+            }
+            else
+            {
+                printf("1");
+            }
+            
+        }
+        printf("\n");
+    }
+    
+    printf("\n");
+
+    /* 21 */
     
 
+
+    /* 22 */
+    for (int i = 1; i <= 5; i++)
+    {
+        if (i == 1 || i == 5)
+        {
+            for (int j = 1; j <= 5; j++)
+            {
+                printf("*");
+            }
+            
+        }
+        else
+        {
+            printf("*    *");
+        }
+        
+        printf("\n");
+    }
+    printf("\n");
+    /* 23 */ 
+    for (int i = 1; i <= 5; i++)
+    {   
+        for (int j = 1; j <= i; j++)
+        {
+         if ( i != 5)
+         {   
+            if (j == i || j == 1)
+            {
+                printf("1");
+            }
+            else
+            {
+                printf("0");
+            }
+            
+        }
+        else
+        {
+            printf("1");
+        }
+           
+    }
+        printf("\n");
+    }
+
+    printf("\n");
+
+    /* 24 */
+    for (int i = 1; i <= 5; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            printf("%c",'a'+ j-1);
+        }
+     printf("\n");   
+    }
+
+    printf("\n");
+
+    /* 25 */
+    for (int i = 1; i<= 9; i=i+2)
+    {
+        for (int j =i ; j <= 9; j =j+2)
+        {
+            printf("%d",j);
+        }
+        printf("\n");
+    }
+    
+    printf("\n");
+
+    /* 26 */
+    for (int i = 1; i <= 5; i++)
+    {
+        for (int j = 1; j <= 5; j++)
+        {
+            printf("1");
+        }
+        printf("\n");
+    }
+    
+    printf("\n");
+
+    /* 27 */
+    for (int i = 1; i <= 5; i++)
+    {
+        for (int j = 1; j <= 5; j++)
+        {
+            printf("%d",i);
+        }
+        printf("\n");
+    }
+    
+    printf("\n");
+    
+    /* 28 */
+    for (int i = 1; i <= 5; i++)
+    {
+        for (int j = 1; j <= 5; j++)
+        if (i % 2 == 0)
+        {
+            printf("0");
+        }
+        else
+        {
+            printf("1");
+        }
+        
+
+        printf("\n");
+    }
+    
+    printf("\n");
+
+    /* 29 */ 
+    for (int i = 1; i <= 5; i++)
+    {
+        for (int j = 1; j <= 5; j++)
+        if (j % 2 != 0)
+        {
+            printf("0");
+        }
+        else
+        {
+            printf("1");
+        }
+        
+
+        printf("\n");
+    }
+    
+    printf("\n");
+    /* 30 */
+    for (int i = 1; i <= 5; i++)
+    {
+        for (int j = i; j <= i +4; j++)
+        {
+            printf("%d",j);
+        }
+        printf("\n");
+    }
+    
+    printf("\n");
+
+    
 }
+

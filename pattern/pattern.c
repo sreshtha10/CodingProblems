@@ -261,7 +261,18 @@ int main()
     printf("\n");
 
     /* 21 */
-    
+    int b  =1;
+    for (int i = 1 ; i <= 5; i++)
+    {
+        for (int j = 1; j <= i; j++,b++)
+        {
+            printf("%d",b%2);
+            
+        }
+        printf("\n");
+    }
+        
+    printf("\n");
 
 
     /* 22 */
@@ -399,6 +410,18 @@ int main()
     /* 30 */
     for (int i = 1; i <= 5; i++)
     {
+        for (int j = 1; j <= 5; j++)
+        {
+            printf("%d",j);
+        }
+        printf("\n");
+    }
+    
+    printf("\n");
+
+    /* 32 */
+    for (int i = 1; i <= 5; i++)
+    {
         for (int j = i; j <= i +4; j++)
         {
             printf("%d",j);
@@ -407,6 +430,100 @@ int main()
     }
     
     printf("\n");
+
+    /* 31 */
+    for (int i = 1; i <= 5; i++)
+    {
+        if (i == 1 || i == 5)
+        {
+            for (int j = 1; j <= 5; j++)
+            {
+                printf("1");
+            }
+            
+        }
+        else
+        {
+            printf("10001");
+        }
+        
+        printf("\n");
+    }
+    printf("\n");
+
+    /* 33 */
+    for (int i = 1; i <= 5; i++)
+    {
+        if (i %2 != 0)
+        {
+            for (int j = 1; j <=5; j++)
+            {
+                if ( j %2 != 0)
+                {
+                    printf("1");
+                }
+                else
+                {
+                    printf("0");
+                }
+                
+            }
+            
+        }
+        else
+        {
+            for (int j = 1; j <= 5; j++)
+            {
+                if (j %2 == 0)
+                {
+                    printf("1");
+                }
+                else
+                {
+                    printf("0");
+                }
+                
+            }
+            
+        }
+        printf("\n");
+    }
+
+    printf("\n");
+
+    /* 34 */
+    for (int i = 1; i <= 5; i++)
+    {
+        if (i == 3)
+        {
+            for (int j = 1; j <= 5; j++)
+            {
+                printf("0");
+            }
+            
+        }
+        else
+        {
+            for (int j = 1; j<= 5; j++)
+            {
+                if (j == 3)
+                {
+                    printf("0");
+                }
+                else
+                {
+                    printf("1");
+                }
+                
+            }
+            
+        }
+        printf("\n");
+    }
+    
+    printf("\n");
+    
+    
 
     
 }

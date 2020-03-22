@@ -541,9 +541,26 @@ int main()
         }
         printf("\n");
     }
-    
-    
+    printf("\n");
+    /* 36 */
 
+    /* 37 */
+    for (int  i = 1; i <= 5; i++)
+    {
+        for (int j = 1; j <= 5; j++)
+        {
+            if (j == i && j == 6-i)
+            {
+                printf("0");
+            }
+            else
+            {
+                printf("1");
+            }
+            
+        }
+        printf("\n");
+    }
     
-}
-
+    printf("\n");
+    /* 38 */

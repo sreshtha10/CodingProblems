@@ -576,5 +576,22 @@ int main()
     }
     printf("\n");
     }
+    printf("\n");
+    /* 39 */
+    for (int i = 1; i <= 5; i++)
+    {
+        int count = 1;
+        for (int j = i; count <=6-i; j++,count++)
+        {
+            printf("%d",j);
+        }
+        for (; count<=5;count++)
+        {
+            printf("%d",6-count);
+        }
+        
+        printf("\n");
+    }
+    
     
 }

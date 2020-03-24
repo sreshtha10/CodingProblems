@@ -561,6 +561,20 @@ int main()
         }
         printf("\n");
     }
-    
     printf("\n");
-    /* 38 */
+    /* 38*/
+    for (int i = 1; i <= 5; i++)
+    {
+        int count = 1;
+     for (int j = i; count<=i; j--,count++)
+     {
+        printf("%d",j);
+     }
+    for (int j = 2; count<=5; count++,j++)
+    {
+        printf("%d",j);
+    }
+    printf("\n");
+    }
+    
+}

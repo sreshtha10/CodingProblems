@@ -610,5 +610,22 @@ int main()
         printf("\n");
     }
     
+    printf("\n");
+    /* 41 */
+    for (int i = 5; i>=1; i--)
+    {
+        int count =1 ;
+        int j = 5;
+        for (; j >= i; j--,count++)
+        {
+            printf("%d",j);
+        }
+        for (; count <= 5; count++)
+        {
+            printf("%d",i);
+        }
+        printf("\n");
+    }
     
+
 }

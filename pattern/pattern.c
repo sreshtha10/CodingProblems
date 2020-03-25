@@ -695,7 +695,27 @@ int main()
     }
 
     printf("\n");
-    
+
+    /* 46 */
+    for (int i = 1; i <=5; i++)
+    {
+        int j =1;
+        for (; j<=i;j++)
+        {
+            printf("%d",j);
+        }
+        for (int z = j-2; z>= 1;z =z-1)
+        {
+            printf("%d",z);
+        }
+        
+        printf("\n");
+    }
+
+    printf("\n");  
+
+    /* 47 */
+        
     
     
 

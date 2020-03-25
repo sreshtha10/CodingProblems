@@ -658,6 +658,23 @@ int main()
         }
         printf("\n");
     }
+    printf("\n");
+
+    /* 44 */
+    for (int i = 1; i <=5; i++)
+    {
+        int j =1;
+        for (; j<=(2*i)-1; j=j+2)
+        {
+            printf("%d",j);
+        }
+        for (int z = j-4; z>= 1;z =z-2)
+        {
+            printf("%d",z);
+        }
+        
+        printf("\n");
+    }
     
     
     

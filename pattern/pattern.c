@@ -715,8 +715,16 @@ int main()
     printf("\n");  
 
     /* 47 */
-        
+    
+    /* 48 */
+    int x = 1;
+    for (int i = 1; i <= 5; i++)
+    {
+        for (int j = 1; j <=i; j++,x++)
+        {
+            printf("%d%c",x,32);
+        }
+        printf("\n");
+    }
     
     
-
-}

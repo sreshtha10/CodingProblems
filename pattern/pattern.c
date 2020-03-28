@@ -543,6 +543,48 @@ int main()
     }
     printf("\n");
     /* 36 */
+   for (int i = 1; i <=5 ; i++)
+   {
+    if (i == 1 || i ==5)
+    {
+        for (int j = 1; j <= 5; j++)
+        {
+            if (j == 1 || j ==5)
+            {
+                printf("0");
+            }
+            
+            else
+            {
+                printf("1");
+            }
+            
+        }
+        
+    }
+    else
+    {
+        for (int j = 1; j <= 5; j++)
+        {
+            if (j == 1 || j == 5)
+            {
+                printf("1");
+            }
+            else
+            {
+                printf("0");
+            }
+            
+        }
+        
+    }
+    printf("\n");
+   }
+
+   printf("\n");
+   
+
+
 
     /* 37 */
     for (int  i = 1; i <= 5; i++)
@@ -750,6 +792,10 @@ for (int i = 1; i <= 5; i++)
     }
     printf("\n");
 }
+
+printf("\n");
+
+/* 50 */
 
 
 }

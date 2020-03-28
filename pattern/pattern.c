@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<math.h>
 int main()
 {
     /* 1*/
@@ -796,6 +797,24 @@ for (int i = 1; i <= 5; i++)
 printf("\n");
 
 /* 50 */
+int m =2;
+printf("1 \n");
+for (int i = 1; i <= 4; i++)
+{
+    int count =1;
+    for (; count <= pow(2,i);count++,m++)
+    {   
+         if (m> 9)
+        {
+            m =1;
+        }
+
+        printf("%d",m);
+    }
+    printf("\n");
+}
+
+printf("\n");
 
 
 }

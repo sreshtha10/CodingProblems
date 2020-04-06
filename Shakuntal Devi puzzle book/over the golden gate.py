@@ -4,7 +4,6 @@
 #t1 and t2 be the time for first and second trips.
 #t1 = x/40 and t2  = x/20
 #average speed is 2x/((x/40)+(x/20))
-import numpy as np
 x = 1
 s1 = 40
 s2 = 25

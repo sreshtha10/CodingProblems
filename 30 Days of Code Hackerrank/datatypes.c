@@ -17,3 +17,4 @@ int main() {
     printf("%.1lf\n",d+b);
     printf("%s%s",s,c);
     return 0;
+}

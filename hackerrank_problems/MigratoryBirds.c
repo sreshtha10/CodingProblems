@@ -1,17 +1,12 @@
 #include<stdio.h>
 #include<stdlib.h>
-typedef  enum {
-    F, T
-} boolean;
 int calc(int *arr,int n)
 {
-    boolean vector;
-    vector = F;
+    int *vector = (int*)malloc(n*sizeof(int));
     int count,id,max =0;
     for(int i = 0;i<n;i++)
         {
-            vector = F;
-            if (vector == T)
+            if (*(vector+i) == 1)
             {
                 continue;
             }
@@ -21,7 +16,7 @@ int calc(int *arr,int n)
                 if(*(arr+i) == *(arr+j))
                 {
                     count++;
-                    vector = T;
+                    *(vector+j) = 1;
                 }
             }
             if(count> max)

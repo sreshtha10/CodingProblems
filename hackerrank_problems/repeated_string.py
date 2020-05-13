@@ -1,0 +1,5 @@
+arr = list(map(str,input()))
+n = int(input())
+a = len(arr)
+count = ((n//a)*(arr.count('a'))) +arr[:n%a].count('a')
+print(count)

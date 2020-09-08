@@ -1,2 +1,2 @@
-# CC
-This repository contains solutions of hackerrank problems and some other logical puzzles.
+# Coding Problems
+This repository contains solutions of coding problems from hackerrank,hackerearth and codechef.

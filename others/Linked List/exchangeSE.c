@@ -65,6 +65,21 @@ struct node* exchangeSE_data(struct node* start){
     return start;
 }
 
+//Swap first and last element by rearranging links.
+struct node* exchangeSE_link(struct node * start){
+    struct node * tmp,*r;
+    r  =start;
+    while(r->link->link != NULL){
+        r = r->link;
+    }
+    tmp = start;
+    start = r->link;
+    start->link = tmp->link;
+    r->link = tmp;
+    tmp->link = NULL;
+    return start;
+    
+}
 
 
 int main(void)

@@ -39,31 +39,15 @@ class LinkedList{
             
         }
         public void moveMAX(){
-            //Find the position of the maximum element
-            int pos=0;
-            int maxPos = 0;
-            int max = head.data;
             Node p = head;
-            while(p!= null){
-                if(p.data > max ){
-                    max = p.data;
-                    maxPos = pos;
-                }
-                pos++;
-                p = p.next;
-            }
-            if(maxPos == pos){
-                return;
-            } // last element is the maximum element
-            p = head;
-            pos = 0;
-            while(p.next != null){
-                if(pos >= maxPos){
+            int tmp;
+            while(p.next!= null){
+                if(p.data > p.next.data){
+                    tmp = p.data;
                     p.data = p.next.data;
-                    p.next.data = max;
+                    p.next.data = tmp;
                 }
                 p = p.next;
-                pos++;
             }
             return;
         }
@@ -79,6 +63,7 @@ public class Main{
         linkedlist.insert(2);
         linkedlist.insert(3);
         linkedlist.insert(2);
+        linkedlist.insert(0);
         linkedlist.moveMAX();
         linkedlist.print();
     }

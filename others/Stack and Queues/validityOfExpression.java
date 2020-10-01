@@ -1,4 +1,6 @@
-// checking the validity of an expression using stack.
+/* checking the validity of an expression using stack.
+Basic Idea: We will push each left parentheses in the stack and when a right parentheses appears we will match it with the popped out character.
+            If are the parenthese will match the stack will eventually become empty.*/
 import java.util.Scanner;
 class Stack{
     int size;

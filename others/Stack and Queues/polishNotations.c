@@ -6,7 +6,7 @@
 #define TAB '\t'
 #define MAX 50
 long int stack[MAX];
-char infix[MAX],char postfix[MAX];
+char infix[MAX],postfix[MAX];
 int top = -1;
 
 int isEmpty(){
@@ -30,7 +30,7 @@ int white_space(char symbol){
 long int pop(){
     if(isEmpty()){
         printf("Stack Underflow\n");
-        exti(1);
+        exit(1);
     }
     return stack[top--];
 }
@@ -49,7 +49,7 @@ long int eval_postflix(){
     long int a,b,tmp,result;
     for(unsigned int i = 0;i<strlen(postfix);i++){
         if(postfix[i] <= '9' && postfix[i] >= '0'){
-            push(postfix[i]);
+            push(postfix[i]-'0');
         }
         else{
             a = pop();
@@ -79,6 +79,12 @@ long int eval_postflix(){
     return result;
 }
 
+int main(void){
+    scanf("%s",postfix);
+    int x = eval_postflix();
+    printf("%d",x);
+    return 0;
+}
 
 
 

@@ -8,6 +8,7 @@ public class Main{
 		String infix = scanner.nextLine();
 		String postfixString = infixtoPostfix(infix);
 		System.out.println("Postfix : "+postfixString);
+		System.out.println("Value "+evaluatePostfix(postfixString));
 		scanner.close();
 		return;
 		
@@ -62,6 +63,40 @@ public class Main{
 			postfix += stack.pop();
 		}
 		return postfix;
+	}
+	
+	public static int evaluatePostfix(String postfixString) {
+		Stack<Integer> stack = new Stack<>();
+		int result = 0;
+		for(int i=0;i<postfixString.length();i++) {
+			char c = postfixString.charAt(i);
+			if(c <='9' && c>= '0') { // element is operand.
+				int x = c-'0';
+				stack.push(x);	
+				}
+			else {
+				int a = stack.pop();
+				int b = stack.pop();
+				switch(c) {
+				case '+':
+					result = a+b;
+					break;
+				case '/':
+					result = b/a;
+					break;
+				case '-':
+					result = b-a;
+					break;
+				case '*':
+					result = b*a;
+				case '^':
+					result = (int)Math.pow(b, a);
+					break;
+				}
+				stack.push(result);
+			}
+		}
+		return stack.pop();	
 	}
 	
 }

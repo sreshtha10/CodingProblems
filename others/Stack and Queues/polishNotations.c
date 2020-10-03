@@ -45,3 +45,45 @@ void push(long int symbol){
 }
 
 
+long int eval_postflix(){
+    long int a,b,tmp,result;
+    for(unsigned int i = 0;i<strlen(postfix);i++){
+        if(postfix[i] <= '9' && postfix[i] >= '0'){
+            push(postfix[i]);
+        }
+        else{
+            a = pop();
+            b = pop();
+            switch(postfix[i]){
+                case '*':
+                        tmp = a*b;
+                        break;
+                case '/':
+                        tmp = b/a;
+                        break;
+                case '-':
+                        tmp = b-a;
+                        break;
+                case '+':
+                        tmp = a+b;
+                        break;
+                case '^':
+                        tmp = pow(b,a);
+                        break;
+                
+            }
+            push(tmp);
+        }
+    }
+    result = pop();
+    return result;
+}
+
+
+
+
+
+
+
+
+

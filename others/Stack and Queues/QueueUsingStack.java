@@ -1,5 +1,7 @@
 import java.util.*;
 
+import com.sun.org.apache.bcel.internal.generic.POP;
+
 /* Implementing a queue using two stacks.
 	Basic Idea:
 	
@@ -24,6 +26,7 @@ import java.util.*;
 class Queue{
 	Stack<Integer> inStack = new Stack<Integer>();
 	Stack<Integer> outStack = new Stack<Integer>();
+	//Method 1:
 	public void enqueue(int x) {
 		inStack.push(x);
 		return;
@@ -35,6 +38,30 @@ class Queue{
 			}
 		}
 		return outStack.pop();
+	}
+	//Method 2:
+	public void enq(int x) {
+		if(inStack.isEmpty()) {
+			inStack.push(x);
+			return;
+		}
+		while(!inStack.isEmpty()) {
+			outStack.push(inStack.pop());
+		}
+		inStack.push(x);
+		while(!outStack.isEmpty()) {
+			inStack.push(outStack.pop());
+		}
+		return;
+	}
+	public int  deq() {
+		if(inStack.isEmpty()) {
+			System.out.println("Empty Queue");
+			return -1;
+		}
+		return inStack.pop();
+		
+		
 	}
 	
 }

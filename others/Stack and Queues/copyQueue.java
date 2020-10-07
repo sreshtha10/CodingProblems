@@ -1,7 +1,4 @@
 import java.util.*;
-
-import jdk.internal.jshell.tool.resources.l10n;
-
 public class Main{
 	public static void main(String args[]) {
 		Queue<Integer> q1 = new LinkedList<>();

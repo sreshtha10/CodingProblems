@@ -1,6 +1,6 @@
 #include<stdio.h>
 int properDivisor(int number,int divisor){
-    if(divisor == 1){
+    if(divisor == 0){
         return 0;
     }
     if(number%divisor == 0){

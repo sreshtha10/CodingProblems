@@ -1,26 +1,42 @@
-
-class KMP{
-	String string;
-	String pattern;
-	int[] lps;
-	
-	KMP(String string,String pattern){
-		this.string = string;
-		this.pattern = pattern;
-		this.lps = new int[pattern.length()];
-	}
-	
-	
-	public int kmp() {
-		this.createLPS();
-		//System.out.println(Arrays.toString(this.lps));
-		int i = 0,j= 0;
+class Solution {
+    public int strStr(String haystack, String needle) {
+        
+        int n=haystack.length();
+        int m = needle.length();
+        
+        int[] lps = new int[m];
+        
+        if(needle.isEmpty()){
+            return 0;
+        }
+        
+        int i=0,j=1;
+	lps[0] = 0;
 		
-		while(i<this.string.length() && j<this.pattern.length()) {
+		while(j<m) {
 			
+			if(needle.charAt(i) == needle.charAt(j)) {
+				lps[j] = i+1;
+				i++;
+				j++;
+				continue;
+			}
 			
-			//System.out.println(i+" "+j);
-			if(this.string.charAt(i) == this.pattern.charAt(j)) {
+			if(i ==0) {
+				lps[j] = 0;
+				j++;
+			}
+			else {
+				i = lps[i-1];
+			}
+		}
+        
+        
+        i =0;
+        j =0;
+        
+        while(i<n && j<m) {
+			if(haystack.charAt(i) == needle.charAt(j)) {
 				i++;
 				j++;
 			}
@@ -28,63 +44,17 @@ class KMP{
 				i++;
 			}
 			else {
-				j = this.lps[j-1];
+				j = lps[j-1];
 			}
 	
 		}	
 		
-		if(j==pattern.length()) {
-			return i-pattern.length();
+		if(j==m) {
+			return i-m;
 		}
-		
-		
-		return -1;
-		
-		
-		
-		
-	}
-	
-	
-	private void createLPS() {
-		int i=0,j=1;
-		this.lps[0] = 0;
-		
-		while(j<this.pattern.length()) {
-			
-			if(this.pattern.charAt(i) == this.pattern.charAt(j)) {
-				this.lps[j] = i+1;
-				i++;
-				j++;
-				continue;
-			}
-			
-			if(i ==0) {  //this is same as because we wont reach this part if they are not equal, this.pattern.charAt(i) != this.pattern.charAt(j)  && i ==0 
-				this.lps[j] = 0;
-				j++;
-			}
-			else {
-				i = this.lps[i-1];
-			}
-		}
-	}
-}
-
-
-
-class Solution {
-    public int strStr(String haystack, String needle) {
-        
-        if(needle.isEmpty()){
-            return 0;
+		else{
+            		return -1;
         }
-        
-        if(needle.length() > haystack.length()){
-            return -1;
-        }
-        
-        KMP knuth = new KMP(haystack,needle);
-        return knuth.kmp();
         
     }
 }
